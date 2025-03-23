@@ -115,12 +115,12 @@ const registerUser = asyncHandler(async (req, res) => {
 });
 
 const loginUser = asyncHandler(async (req, res) => {
-  // data <- req.body
+  // data from req.body
   // validate data
-  // find User
+  // find the User
   // generate tokens
   // store tokens in database
-  // set tokens in cookie
+  // set tokens in cookie(secured cookies)
   // send response
 
   // data <- req.body
