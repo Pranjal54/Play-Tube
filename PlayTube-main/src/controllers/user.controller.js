@@ -39,6 +39,7 @@ const registerUser = asyncHandler(async (req, res) => {
   // create user
   // check if user created successfully
   // send back the response
+  
 
   // Getting the data from frontend
   let { username, password, fullName, email } = req.body;
@@ -79,7 +80,6 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 
   // uploading on cloudinary
-
   let avatarRes = await uploadOnCloudinary(avatarLocalPath);
   if (!avatarRes)
     throw new APIError(500, "Internal Server Error!!! Files Unable to Upload");
