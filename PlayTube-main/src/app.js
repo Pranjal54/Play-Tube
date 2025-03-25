@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://play-tube-frontend.vercel.app", "http://localhost:5173"],
+    origin: ["https://play-tube-frontend.vercel.app", "http://localhost:8000"],
     credentials: true,
   })
 );
