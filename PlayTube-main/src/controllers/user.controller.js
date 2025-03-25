@@ -162,22 +162,22 @@ const loginUser = asyncHandler(async (req, res) => {
   );
 
   // set tokens in cookie and send response
-  // const cookieOptions = {
-  //   httpOnly: true,
-  //   secure: true,
-  //   sameSite: "None",
-  //   Partitioned: true,
-  // };
+  const cookieOptions = {
+    httpOnly: true,
+    secure: true,
+    sameSite: "None",
+    Partitioned: true,
+  };
 
   res.setHeader(
     "Set-Cookie",
     `accessToken=${accessToken}; Max-Age=${1 * 24 * 60 * 60 * 1000}; Path=/; HttpOnly; SameSite=None; Secure; Partitioned`
   );
 
-  // res.setHeader(
-  //   "Set-Cookie",
-  //   `__Host-refreshToken=${refreshToken}; Max-Age=${10 * 24 * 60 * 60 * 1000}; Path=/; HttpOnly; SameSite=None; Secure; Partitioned`
-  // );
+  res.setHeader(
+    "Set-Cookie",
+    `__Host-refreshToken=${refreshToken}; Max-Age=${10 * 24 * 60 * 60 * 1000}; Path=/; HttpOnly; SameSite=None; Secure; Partitioned`
+  );
 
   return res
     .status(200)
@@ -268,10 +268,10 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
       `accessToken=${accessToken}; Max-Age=${1 * 24 * 60 * 60 * 1000}; Path=/; HttpOnly; SameSite=None; Secure; Partitioned`
     );
 
-    // res.setHeader(
-    //   "Set-Cookie",
-    //   `refreshToken=${refreshToken}; Max-Age=${10 * 24 * 60 * 60 * 1000}; Path=/; HttpOnly; SameSite=None; Secure; Partitioned`
-    // );
+    res.setHeader(
+      "Set-Cookie",
+      `refreshToken=${refreshToken}; Max-Age=${10 * 24 * 60 * 60 * 1000}; Path=/; HttpOnly; SameSite=None; Secure; Partitioned`
+    );
 
     return res
       .status(200)
