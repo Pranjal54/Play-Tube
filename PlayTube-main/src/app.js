@@ -4,10 +4,10 @@ import cookieParser from "cookie-parser";
 import morgan from "morgan";
 
 const app = express();
-
+//https://play-tube-frontend.vercel.app
 app.use(
   cors({
-    origin: ["https://play-tube-frontend.vercel.app", "http://localhost:8000"],
+    origin: ["https://play-tube-frontend.vercel.app", "http://localhost:5173", "http://localhost:4173"],
     credentials: true,
   })
 );
