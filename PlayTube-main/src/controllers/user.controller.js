@@ -39,7 +39,6 @@ const registerUser = asyncHandler(async (req, res) => {
   // create user
   // check if user created successfully
   // send back the response
-  
 
   // Getting the data from frontend
   let { username, password, fullName, email } = req.body;
@@ -80,6 +79,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 
   // uploading on cloudinary
+
   let avatarRes = await uploadOnCloudinary(avatarLocalPath);
   if (!avatarRes)
     throw new APIError(500, "Internal Server Error!!! Files Unable to Upload");
@@ -115,12 +115,12 @@ const registerUser = asyncHandler(async (req, res) => {
 });
 
 const loginUser = asyncHandler(async (req, res) => {
-  // data from req.body
+  // data <- req.body
   // validate data
-  // find the User
+  // find User
   // generate tokens
   // store tokens in database
-  // set tokens in cookie(secured cookies)
+  // set tokens in cookie
   // send response
 
   // data <- req.body
@@ -141,6 +141,8 @@ const loginUser = asyncHandler(async (req, res) => {
     // throw new APIError(404, "User not Found");
     return res.status(404).json(new APIResponse(404, [], "User not Found"));
   }
+
+  
 
   const isCredentialValid = await user.isPasswordCorrect(password);
   if (!isCredentialValid) {
