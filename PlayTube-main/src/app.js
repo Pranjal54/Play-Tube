@@ -7,10 +7,17 @@ const app = express();
 //https://play-tube-frontend.vercel.app
 app.use(
   cors({
-    origin: ["https://play-tube-frontend.vercel.app", "http://localhost:5173", "http://localhost:4173"],
+    origin: [
+      "https://play-tube-decb6emrw-pranjal54s-projects.vercel.app",
+      "http://localhost:5173",
+      "http://localhost:4173"
+    ],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
   })
 );
+
 // origin: process.env.CORS_ORIGIN,
 
 app.use(express.json({ limit: "99mb" }));
