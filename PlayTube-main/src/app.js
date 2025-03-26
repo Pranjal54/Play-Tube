@@ -63,4 +63,4 @@ app.use("/api/v1/dashboard", dashboardRouter);
 // http://localhost:8000/api/v1/about/user
 app.use("/api/v1/about/user/", aboutRouter);
 
-export { app };
+export default { app };
