@@ -8,7 +8,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://play-tube-decb6emrw-pranjal54s-projects.vercel.app",
+      "https://play-tube-sepia.vercel.app",
       "http://localhost:5173",
       "http://localhost:4173"
     ],
