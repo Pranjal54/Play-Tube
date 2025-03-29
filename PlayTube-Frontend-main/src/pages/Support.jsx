@@ -30,7 +30,19 @@ function Support() {
                   </a>
                 </div>
               </li>
-              
+              <li className="flex items-center">
+                <span className="w-9 h-9 rounded-full mr-4">{icons.link}</span>
+                <div className="h-full">
+                  <h2 className="text-lg font-bold my-0">LikedIn</h2>
+                  <a
+                    href="https://www.linkedin.com/in/pranjal-mishra-78202922b/"
+                    target="_blank"
+                    className="text-blue-500 text-sm hover:text-blue-400 "
+                  >
+                    /pranjal-mishra
+                  </a>
+                </div>
+              </li>
               <li className="flex items-center">
                 <span className="w-9 h-9 rounded-full mr-4">{icons.link}</span>
                 <div className="h-full">
