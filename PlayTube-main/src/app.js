@@ -9,6 +9,7 @@ app.use(
   cors({
     origin: [
       "https://play-tube-sepia.vercel.app",
+      "https://play-tube-9tknbo209-pranjal54s-projects.vercel.app/",
       "http://localhost:5173",
       "http://localhost:4173"
     ],
